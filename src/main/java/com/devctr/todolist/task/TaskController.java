@@ -48,7 +48,7 @@ public class TaskController {
 
    
     @GetMapping("/")
-    public List<TaskModel> list(HttpServletRequest request) {
+    public java.util.List<TaskModel> list(HttpServletRequest request) {
 
         var idUser = request.getAttribute("idUser");
         var tasks = this.taskRepository.findByIdUser((UUID) idUser);
